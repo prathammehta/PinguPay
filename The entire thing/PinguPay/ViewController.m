@@ -53,7 +53,7 @@
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection *)connection
 {
-    
+    NSLog(@"QR code found");
 }
 
 @end

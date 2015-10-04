@@ -8,20 +8,40 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <AVCaptureMetadataOutputObjectsDelegate>
+@interface ViewController () <AVCaptureMetadataOutputObjectsDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+
+@property (nonatomic) BOOL qrfound;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad
+{
+    self.creditCardCollectionView.delegate = self;
+    self.creditCardCollectionView.dataSource = self;
+    [self.creditCardCollectionView reloadData];
+    
+    self.storeNameLabel.alpha = 0;
+    self.locationLabel.alpha = 0;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 4;
+}
+
+- (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"creditCardCell" forIndexPath:indexPath];
+    UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:5];
+    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1]];
+    return cell;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -42,18 +62,42 @@
     [captureMetadataOutput setMetadataObjectsDelegate:self queue:dispatchQueue];
     [captureMetadataOutput setMetadataObjectTypes:[NSArray arrayWithObject:AVMetadataObjectTypeQRCode]];
     
-    _videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
-    [_videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [_videoPreviewLayer setFrame:self.cameraPreview.layer.bounds];
+    self.videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
+    [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    [self.videoPreviewLayer setFrame:self.cameraPreview.layer.bounds];
     [self.cameraPreview.layer addSublayer:_videoPreviewLayer];
     
     [self.captureSession startRunning];
+    
+    
+
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection *)connection
 {
-    NSLog(@"QR code found");
+    
+    if(!self.qrfound)
+    {
+        self.qrfound = YES;
+        AVMetadataMachineReadableCodeObject *metadataObject = metadataObjects.lastObject;
+        NSLog(@"Object: %@",metadataObject.stringValue);
+        [self performSelectorOnMainThread:@selector(performAnimations) withObject:nil waitUntilDone:NO];
+    }
+}
+
+- (void) performAnimations
+{
+    [UIView animateWithDuration:1.0
+                     animations:^{
+                         self.cameraPreview.alpha = 0;
+                         self.creditCardCollectionView.center = CGPointMake(self.view.center.x,
+                                                                            self.creditCardCollectionView.center.y - 100);
+                         self.storeNameLabel.alpha = 1.0;
+                         self.locationLabel.alpha = 1.0;
+                     }
+                     completion:nil];
+
 }
 
 @end

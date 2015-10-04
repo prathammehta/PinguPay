@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UIView *cameraPreview;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property (weak, nonatomic) IBOutlet UICollectionView *creditCardCollectionView;
+@property (weak, nonatomic) IBOutlet UILabel *storeNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @end
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4200D8181BCF81D10095F0A4 /* creditCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4200D8171BCF81D10095F0A4 /* creditCardView.xib */; settings = {ASSET_TAGS = (); }; };
+		4200D81B1BCF85430095F0A4 /* mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4200D81A1BCF85430095F0A4 /* mastercard.png */; settings = {ASSET_TAGS = (); }; };
+		4200D81D1BCF85A00095F0A4 /* icici.png in Resources */ = {isa = PBXBuildFile; fileRef = 4200D81C1BCF85A00095F0A4 /* icici.png */; settings = {ASSET_TAGS = (); }; };
+		4200D81F1BCF86980095F0A4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4200D81E1BCF86980095F0A4 /* background.jpg */; settings = {ASSET_TAGS = (); }; };
 		42AF4DB51BBEB98F00AE676A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF4DB41BBEB98F00AE676A /* main.m */; };
 		42AF4DB81BBEB98F00AE676A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42AF4DB71BBEB98F00AE676A /* AppDelegate.m */; };
 		42AF4DBB1BBEB98F00AE676A /* PinguPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42AF4DB91BBEB98F00AE676A /* PinguPay.xcdatamodeld */; };
@@ -18,6 +22,8 @@
 		42AF4DDC1BBEBC2600AE676A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AF4DDB1BBEBC2600AE676A /* Foundation.framework */; };
 		42AF4DDE1BBEBC2B00AE676A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AF4DDD1BBEBC2B00AE676A /* AVFoundation.framework */; };
 		42AF4DE01BBEBC3600AE676A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42AF4DDF1BBEBC3600AE676A /* CoreGraphics.framework */; };
+		42D972861BD1718700A52A4C /* walletView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42D972851BD1718700A52A4C /* walletView.xib */; settings = {ASSET_TAGS = (); }; };
+		42D972881BD1731200A52A4C /* Paytm_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D972871BD1731200A52A4C /* Paytm_logo.png */; settings = {ASSET_TAGS = (); }; };
 		42FE54291BC151B3003269C3 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FE54251BC151B3003269C3 /* 1.png */; settings = {ASSET_TAGS = (); }; };
 		42FE542A1BC151B3003269C3 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FE54261BC151B3003269C3 /* 4.png */; settings = {ASSET_TAGS = (); }; };
 		42FE542B1BC151B3003269C3 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FE54271BC151B3003269C3 /* 2.png */; settings = {ASSET_TAGS = (); }; };
@@ -35,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4200D8171BCF81D10095F0A4 /* creditCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = creditCardView.xib; sourceTree = "<group>"; };
+		4200D81A1BCF85430095F0A4 /* mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mastercard.png; sourceTree = "<group>"; };
+		4200D81C1BCF85A00095F0A4 /* icici.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icici.png; sourceTree = "<group>"; };
+		4200D81E1BCF86980095F0A4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		42AF4DAF1BBEB98F00AE676A /* PinguPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinguPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42AF4DB31BBEB98F00AE676A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42AF4DB41BBEB98F00AE676A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,6 +62,8 @@
 		42AF4DDB1BBEBC2600AE676A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42AF4DDD1BBEBC2B00AE676A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		42AF4DDF1BBEBC3600AE676A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42D972851BD1718700A52A4C /* walletView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = walletView.xib; sourceTree = "<group>"; };
+		42D972871BD1731200A52A4C /* Paytm_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paytm_logo.png; sourceTree = "<group>"; };
 		42FE54251BC151B3003269C3 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		42FE54261BC151B3003269C3 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		42FE54271BC151B3003269C3 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -79,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4200D8191BCF85310095F0A4 /* Credit Card Images */ = {
+			isa = PBXGroup;
+			children = (
+				42D972871BD1731200A52A4C /* Paytm_logo.png */,
+				4200D81C1BCF85A00095F0A4 /* icici.png */,
+				4200D81E1BCF86980095F0A4 /* background.jpg */,
+				4200D81A1BCF85430095F0A4 /* mastercard.png */,
+			);
+			name = "Credit Card Images";
+			sourceTree = "<group>";
+		};
 		42AF4DA61BBEB98F00AE676A = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +126,8 @@
 		42AF4DB11BBEB98F00AE676A /* PinguPay */ = {
 			isa = PBXGroup;
 			children = (
+				4200D8171BCF81D10095F0A4 /* creditCardView.xib */,
+				42D972851BD1718700A52A4C /* walletView.xib */,
 				42AF4DB61BBEB98F00AE676A /* AppDelegate.h */,
 				42AF4DB71BBEB98F00AE676A /* AppDelegate.m */,
 				42AF4DBC1BBEB98F00AE676A /* ViewController.h */,
@@ -119,6 +144,7 @@
 		42AF4DB21BBEB98F00AE676A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4200D8191BCF85310095F0A4 /* Credit Card Images */,
 				42FE54251BC151B3003269C3 /* 1.png */,
 				42FE54261BC151B3003269C3 /* 4.png */,
 				42FE54271BC151B3003269C3 /* 2.png */,
@@ -227,12 +253,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FE542B1BC151B3003269C3 /* 2.png in Resources */,
+				4200D81D1BCF85A00095F0A4 /* icici.png in Resources */,
 				42FE54291BC151B3003269C3 /* 1.png in Resources */,
 				42AF4DC11BBEB98F00AE676A /* Main.storyboard in Resources */,
+				4200D8181BCF81D10095F0A4 /* creditCardView.xib in Resources */,
+				4200D81B1BCF85430095F0A4 /* mastercard.png in Resources */,
 				42AF4DC61BBEB98F00AE676A /* LaunchScreen.xib in Resources */,
 				42AF4DC31BBEB98F00AE676A /* Images.xcassets in Resources */,
 				42FE542C1BC151B3003269C3 /* 3.png in Resources */,
+				4200D81F1BCF86980095F0A4 /* background.jpg in Resources */,
+				42D972881BD1731200A52A4C /* Paytm_logo.png in Resources */,
 				42FE542A1BC151B3003269C3 /* 4.png in Resources */,
+				42D972861BD1718700A52A4C /* walletView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pratham Mehta (4U39QQYM8C)";
 				INFOPLIST_FILE = PinguPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pratham Mehta (RV68FXHFU7)";
 				INFOPLIST_FILE = PinguPay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

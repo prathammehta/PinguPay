@@ -11,6 +11,9 @@
 @interface ViewController () <AVCaptureMetadataOutputObjectsDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) BOOL qrfound;
+@property (weak, nonatomic) IBOutlet UITextField *amountField;
+@property (weak, nonatomic) IBOutlet UIButton *payConfirmButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @end
 
@@ -22,8 +25,9 @@
     self.creditCardCollectionView.dataSource = self;
     [self.creditCardCollectionView reloadData];
     
-    self.storeNameLabel.alpha = 0;
-    self.locationLabel.alpha = 0;
+    self.amountField.alpha = 0.0;
+    self.payConfirmButton.alpha = 0.0;
+    self.cancelButton.alpha = 0.0;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -39,8 +43,11 @@
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"creditCardCell" forIndexPath:indexPath];
-    UIImageView *imageView = (UIImageView *)[cell.contentView viewWithTag:5];
-    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1]];
+    
+    UIView *view = [[NSBundle mainBundle] loadNibNamed:@"walletView" owner:self options:nil].firstObject;
+    
+    [cell.contentView addSubview:view];
+    
     return cell;
 }
 
@@ -91,12 +98,16 @@
     [UIView animateWithDuration:1.0
                      animations:^{
                          self.cameraPreview.alpha = 0;
+                         self.amountField.alpha = 1.0;
+                         self.payConfirmButton.alpha = 1.0;
+                         self.cancelButton.alpha = 1.0;
+
                          self.creditCardCollectionView.center = CGPointMake(self.view.center.x,
-                                                                            self.creditCardCollectionView.center.y - 100);
-                         self.storeNameLabel.alpha = 1.0;
-                         self.locationLabel.alpha = 1.0;
+                                                                            self.creditCardCollectionView.center.y - 200);
                      }
-                     completion:nil];
+                     completion:^(BOOL sucess){
+                         [self.amountField becomeFirstResponder];
+                     }];
 
 }
 
